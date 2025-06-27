@@ -1,0 +1,118 @@
+.hero-section {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: none;
+}
+.particle-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 420px;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+  text-shadow: var(--neon-glow);
+  margin-bottom: 1.2rem;
+}
+.typewriter {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 2.2rem;
+  min-height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type-cursor {
+  color: var(--color-secondary);
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+.neon-btn {
+  padding: 0.8rem 2.2rem;
+  border-radius: 2rem;
+  background: var(--glass-bg);
+  border: 1.5px solid var(--glass-border);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--neon-glow);
+  transition: box-shadow 0.3s, background 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.neon-btn:hover {
+  box-shadow: 0 0 16px #6c63ff, 0 0 32px #ff6ec4, 0 0 48px #fff;
+  background: rgba(108,99,255,0.18);
+  animation: pulse 0.7s infinite alternate;
+  transform: translateY(-2px) scale(1.04);
+}
+@keyframes pulse {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.2); }
+}
+.star-bg, .sun-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 420px;
+  z-index: 0;
+  pointer-events: none;
+}
+.code-trail-svg {
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 0 8px #6c63ff88) drop-shadow(0 0 16px #ff6ec488);
+  animation: floatTrail 3.5s ease-in-out infinite alternate;
+}
+@keyframes floatTrail {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-12px) scale(1.03); }
+}
+.coder-trail {
+  margin-top: 2.5rem;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+  .typewriter {
+    font-size: 1.1rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+} 
