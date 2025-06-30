@@ -303,4 +303,30 @@
     max-height: 120px;
     padding: 0.4rem 0.5rem;
   }
+}
+.projects-timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 5vw;
+  right: 5vw;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, #6c63ff 0 10px, transparent 10px 20px);
+  border-radius: 3px;
+  box-shadow: 0 0 16px #6c63ff44, 0 0 32px #ff6ec422;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+.horiz-scroll-timeline {
+  position: relative;
+}
+/* Mask for hiding the line behind visible cards */
+.projects-timeline-dotmask {
+  position: absolute;
+  top: 50%;
+  height: 40px;
+  background: #232946;
+  border-radius: 20px;
+  z-index: 1;
+  transform: translateY(-50%);
+  pointer-events: none;
 } 
